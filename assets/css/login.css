@@ -5,5 +5,104 @@ html,body{
 }
 body{
     background: url('/assets/images/login_bg.jpg') no-repeat center;
-    background-size: 100%;
+    background-size: cover;
+    position: relative;
 }
+.logo {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.login {
+   width: 400px;
+   height: 310px;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding-left: 30px;
+   padding-right: 30px;
+}
+.login .title {
+    margin: 18px;
+    height: 25px;
+    width: 100%;
+    background: url('/assets/images/login_title.png') no-repeat center;
+}
+.login .layui-input {
+    width: 400px;
+    padding-left: 30px;
+}
+.login .layui-input-inline {
+    position: relative;
+}
+.login .layui-icon-username {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+
+}
+.login .layui-icon-password {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+
+}
+
+.login .layui-btn {
+    width: 400px;
+
+}
+.login .link {
+    float: right;
+}
+
+.register {
+    display: none;
+
+    width: 400px;
+   height: 310px;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding-left: 30px;
+   padding-right: 30px;
+
+}
+.register .title {
+    margin: 18px;
+    height: 25px;
+    width: 100%;
+    background: url('/assets/images/login_title.png') no-repeat center;
+}
+.register .layui-input {
+    width: 400px;
+    padding-left: 30px;
+}
+
+.register .layui-btn {
+    width: 400px;
+
+}
+.register .link {
+    float: right;
+}
+
+.register .layui-form-item {
+    position: relative;
+}
+.register .layui-icon-username {
+    position: absolute;
+    top:10px;
+    left: 5px;
+}
+
+ .register .layui-icon-password {
+    position: absolute;
+    top:10px;
+    left: 5px;
+
+ }
+
