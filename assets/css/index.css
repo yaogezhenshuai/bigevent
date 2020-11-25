@@ -1,0 +1,57 @@
+.userinfo {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 12px;
+}
+.userinfo .text-avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #009688;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+
+}
+.layui-side .layui-nav-item a {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.layui-header .text-avatar{
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #009688;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+.layui-nav .iconfont {
+    margin-right: 10px;
+}
+
+.layui-nav .layui-nav-child a{
+    margin-left: 20px;
+}
+.layui-nav .layui-nav-child a .layui-icon{
+    margin-right: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* 给父级的div加 overflow:hidden */
+.layui-body {
+    overflow: hidden;
+}
+.layui-footer {
+    text-align: center;
+}
