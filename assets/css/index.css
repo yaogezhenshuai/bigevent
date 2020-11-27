@@ -13,6 +13,7 @@
     text-align: center;
     line-height: 40px;
     font-size: 20px;
+    display: none;
 
 }
 .layui-side .layui-nav-item a {
@@ -31,6 +32,8 @@
     text-align: center;
     line-height: 40px;
     font-size: 20px;
+    display: none;
+
 }
 .layui-nav .iconfont {
     margin-right: 10px;
@@ -54,4 +57,9 @@ iframe {
 }
 .layui-footer {
     text-align: center;
+}
+iframe{
+    background-color: #f2f3f5;
+    padding: 20px;
+
 }

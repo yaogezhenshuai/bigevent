@@ -12,10 +12,12 @@ $(function () {
             localStorage.removeItem('token');
             location.href = 'login.html';
             layer.close(index);
+
         });
-
     })
-
+    getUserInfo();
+});
+function getUserInfo() {
     $.ajax({
         type: 'GET',
         url: 'http://ajax.frontend.itheima.net/my/userinfo',
@@ -41,8 +43,15 @@ $(function () {
                 $('.text-avatar').text(w);
 
             }
+        },
+        complete: function (xhr) {
+            // console.log(xhr);
+            if (xhr.responseJSON.status === 1 && xhr.responseJSON.message === '身份认证失败！') {
+                localStorage.removeItem('token');
+                location.href = 'login.html';
+            }
         }
 
     })
+}
 
-})
