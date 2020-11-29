@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/art-list/css/art-list.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+
+            <!-- 筛选区域 -->
+            <form class="layui-form" action="" id="Sform">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <select name="cate_id" lay-verify="required">
+                            <option value="">所有分类</option>
+
+
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <select name="state" lay-verify="required">
+                            <option value="">所有状态</option>
+                            <option value="已发布">已发布</option>
+                            <option value="草稿">草稿</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo" id='screen'>筛选</button>
+
+                    </div>
+                </div>
+            </form>
+            <!-- 文章列表区域 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>文章标题</th>
+                        <th>分类</th>
+                        <th>发表时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <!-- 分页区 -->
+            <div id="pageBox"></div>
+        </div>
+    </div>
+
+    <script type="text/html" id="list">
+        {{each data v i}}
+        <tr>
+            <th>{{v.title}}</th>
+            <th>{{v.cate_name}}</th>
+            <th>{{v.pub_date | formatTime}}</th>
+            <th>{{v.state}}</th>
+            <th>
+                <button type="button" class="layui-btn  layui-btn-xs">编辑</button>
+                <button type="button" class="layui-btn  layui-btn-xs layui-btn-danger" id='del' data-id='{{v.Id}}'>删除</button>
+            </th>
+        </tr>
+        {{/each}}
+    </script>
+
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/template-web.js"></script>
+    <script src="/art-list/js/art-list.js"></script>
+</body>
+
+</html>

@@ -61,5 +61,6 @@ iframe {
 iframe{
     background-color: #f2f3f5;
     padding: 20px;
+    box-sizing: border-box;
 
 }
